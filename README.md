@@ -40,15 +40,14 @@ DATASETNAME: miniImagenet/cifar/CUB
 METHODNAME: S2M2_R/rotation/manifold_mixup
 
 1) train frequency version:
-'''
-python
-'''
+```
 	python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug --dct_status
-	
+```	
 
 2) train frequency version:
-
+```
 	python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
+```
 		
 **Fetching WideResNet_28_10 model checkpoints for evaluation**
 
