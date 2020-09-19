@@ -1,5 +1,4 @@
-S2M2
-Charting the Right Manifold: Manifold Mixup for Few-shot Learning
+Few-Shot Learning by Integreting Spatial and Frequency Representation
 =======
 
 A few-shot classification algorithm: [Charting the Right Manifold: Manifold Mixup for Few-shot Learning](https://arxiv.org/pdf/1907.12087.pdf)
