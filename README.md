@@ -17,7 +17,7 @@ Running the code
 ------------
 **Dataset**: mini-ImageNet, CIFAR-FS, CUB
 
-=================================================================================
+============================================================================
 
 ***Donwloading the dataset***:
 
@@ -34,7 +34,7 @@ miniImagenet
 * Change directory to filelists/miniImagenet/
 * run 'source ./download_miniImagenet.sh' 
 
-=================================================================================
+============================================================================
 
 **Training**
 
@@ -54,7 +54,7 @@ METHODNAME: S2M2_R/rotation/manifold_mixup
 		
 All results will be saved in the folder "checkpoints", the best model is "best.tar".
 
-=================================================================================
+============================================================================
 
 **Saving the features of a checkpoint for checkpoint evalution**
 
