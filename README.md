@@ -44,37 +44,65 @@ METHODNAME: S2M2_R/rotation/manifold_mixup
 	python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug --dct_status
 ```	
 
-2) train frequency version:
+2) train spatial version:
 ```
 	python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
 ```
 		
-**Fetching WideResNet_28_10 model checkpoints for evaluation**
-
-Create an empty 'checkpoints' directory inside 'S2M2'
-
-The model for each dataset can be downloaded from this link - [https://drive.google.com/open?id=1S-t56H8YWzMn3sjemBcwMtGuuUxZnvb_](https://drive.google.com/open?id=1S-t56H8YWzMn3sjemBcwMtGuuUxZnvb_)
-
-Move the tar files for each dataset into 'checkpoints' folder and untar it. E.g. tar -xvzf cifar_model.tar.gz 
-
+All results will be saved in the folder "checkpoints", the best model is "best.tar".
 
 **Saving the features of a checkpoint for checkpoint evalution**
+***S2M2_R algorithm***
+1) save frequency version:
+```
+	python save_features.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug --dct_status
+```
+2) save spatial version:
+```
+	python save_features.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
+```
+3) save spatial and frequency version:
+```
+	python save_features_both.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
+```
+***PT-MAP algorithm***
+1) save frequency version:
+```
+	python save_plk.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug --dct_status
+```
+2) save spatial version:
+```
+	python save_plk.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
+```
+3) save spatial and frequency version:
+```
+	python save_plk_both.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
+```
 
-
-	python save_features.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10
-
-
-**Fetching novel class features for evaluation**
-
-Create an empty 'features' directory inside 'S2M2'
-
-Features can be be directly downloaded at this link 'https://drive.google.com/open?id=1JtA7p3sDPksvBmOsJuR4EHw9zRHnKurj' for easy evaluation without the need to download datasets and models. 
-Move the tar files for each dataset into 'features' folder and untar it. 
+All features will be saved in the folder "features".
 
 
 **Evaluating the few-shot performance**
+***S2M2_R algorithm***
+1) test frequency version:
+```
+	python test_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --n_shot [1/5] --train_aug --dct_status	
+```
 
-	python test.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --n_shot [1/5]
+2) test spatial version:
+```
+	python test_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --n_shot [1/5] --train_aug	
+```
+3) test spatial and frequency version:
+```
+	python test_dct_both.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --n_shot [1/5] --train_aug	
+```
+***PT-MAP algorithm***
+```
+	python test_standard.py	
+```
+Revise the .plk file folder in FSLtask.py for frequency(out.plk), spatial(out.plk), frequency+spatial versions (out_both.plk);
+Revise the n_shot in test_standard.py to get result of 5-shot or 1-shot.
 
 Comparison with prior/current state-of-the-art methods on mini-ImageNet, CUB and CIFAR-FS dataset.
 Note: We implemented LEO on CUB dataset. Other numbers are reported directly from the paper. 
