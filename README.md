@@ -34,6 +34,7 @@ miniImagenet
 * Change directory to filelists/miniImagenet/
 * run 'source ./download_miniImagenet.sh' 
 
+==========================================
 
 **Training**
 
@@ -52,6 +53,8 @@ METHODNAME: S2M2_R/rotation/manifold_mixup
 ```
 		
 All results will be saved in the folder "checkpoints", the best model is "best.tar".
+
+==========================================
 
 **Saving the features of a checkpoint for checkpoint evalution**
 
@@ -84,6 +87,7 @@ All results will be saved in the folder "checkpoints", the best model is "best.t
 
 All features will be saved in the folder "features".
 
+==========================================
 
 **Evaluating the few-shot performance**
 
