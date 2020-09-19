@@ -1,0 +1,10 @@
+numpy
+Pillow
+matplotlib
+sklearn
+PyTurboJPEG
+tensorboardX
+opencv-python
+lmdb
+pyarrow
+scikit-image
