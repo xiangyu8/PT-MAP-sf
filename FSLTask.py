@@ -6,19 +6,14 @@ import torch
 
 # ========================================================
 #   Usefull paths
-_datasetFeaturesFiles = {#"miniimagenet": "./checkpoints/miniImagenet/ResNet18_S2M2_R_3channels_5way_1shot/last/output.plk"}
-                         "cub": "./checkpoints/CUB/WideResNet28_10_S2M2_R_3channels_5way_1shot_aug/last/output.plk",
-                         "cub_pretrained": "./checkpoints/CUB/WideResNet28_10_S2M2_R_5way_1shot_aug_pretrained/last/output.plk",
-                         "cub_both_pretrained": "./checkpoints/CUB/WideResNet28_10_S2M2_R_5way_1shot_aug_pretrained/last/output_both.plk",
-                         "miniImagenet_both_pretrained": "./checkpoints/miniImagenet/WideResNet28_10_S2M2_R_5way_1shot_aug_pretrained/last/output_both.plk",
-                         "miniImagenet_pretrained": "./checkpoints/miniImagenet/WideResNet28_10_S2M2_R_5way_1shot_aug_pretrained/last/output.plk",
+_datasetFeaturesFiles = {
                          "cifar": "./checkpoints/cifar/WideResNet28_10_S2M2_R_5way_1shot_aug/last/output.plk",
+                         "cifar_dct": "./checkpoints/cifar/WideResNet28_10_S2M2_R_5way_1shot_aug_dct/last/output.plk",
                          "cifar_both": "./checkpoints/cifar/WideResNet28_10_S2M2_R_5way_1shot_aug/last/output_both.plk",
-                         "cub_dct": "./checkpoints/CUB/WideResNet28_10_S2M2_R_24channels_5way_1shot_aug_dct/last/output.plk",
-                         "cub_both": "./checkpoints/CUB/WideResNet28_10_S2M2_R_3channels_5way_1shot_aug/last/output_both.plk"}
+                         "cub": "./checkpoints/CUB/WideResNet28_10_S2M2_R_5way_1shot_aug/last/output.plk",
+                         "cub_dct": "./checkpoints/CUB/WideResNet28_10_S2M2_R_5way_1shot_aug_dct/last/output.plk",
+                         "cub_both": "./checkpoints/CUB/WideResNet28_10_S2M2_R_5way_1shot_aug/last/output_both.plk"}
 
-#                         "cifar": "./checkpoints/cifar/WideResNet28_10_S2M2_R/last/output.plk",
-#                         "cross": "./checkpoints/cross/WideResNet28_10_S2M2_R/last/output.plk"}
 _cacheDir = "./cache"
 _maxRuns = 10000
 _min_examples = -1
