@@ -109,11 +109,12 @@ All features will be saved in the folder "features".
 ```
 	python test_standard.py	
 ```
+
 Revise the .plk file folder in FSLtask.py for frequency(out.plk), spatial(out.plk), frequency+spatial versions (out_both.plk);
+
 Revise the n_shot in test_standard.py to get result of 5-shot or 1-shot.
 
 Comparison with prior/current state-of-the-art methods on mini-ImageNet, CUB and CIFAR-FS dataset.
-Note: We implemented LEO on CUB dataset. Other numbers are reported directly from the paper. 
 
 
 |      Method    | mini-ImageNet |               |      CUB      |               |   CIFAR-FS     |               |
