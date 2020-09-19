@@ -7,11 +7,11 @@ Our code is built upon the code base of
 
 [A Closer Look at Few-shot Classification](https://openreview.net/pdf?id=HkxLXnAcFQ), 
 
-[Manifold Mixup: Better Representations by Interpolating Hidden States](http://proceedings.mlr.press/v97/verma19a.html), 
-
 [Charting the Right Manifold: Manifold Mixup for Few-shot Learning](https://github.com/nupurkmr9/S2M2_fewshot.git), 
 
-[Learning in the Frequency Domain](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xu_Learning_in_the_Frequency_Domain_CVPR_2020_paper.pdf)([code](https://github.com/calmevtime/DCTNet.git))
+[Learning in the Frequency Domain](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xu_Learning_in_the_Frequency_Domain_CVPR_2020_paper.pdf)( [code](https://github.com/calmevtime/DCTNet.git))
+
+[Leveraging the Feature Distribution in Transfer-based Few-Shot Learning](https://arxiv.org/pdf/2006.03806v2.pdf) ( [code](https://github.com/yhu01/PT-MAP))
 
 Running the code
 ------------
