@@ -116,7 +116,7 @@ Comparison with prior/current state-of-the-art methods on mini-ImageNet, CUB and
 Note: We implemented LEO on CUB dataset. Other numbers are reported directly from the paper. 
 
 
-|      Method    | mini-ImageNet |               |      CUB      |               |   CIFAR-FS     |               |
+|      Method    | mini-ImageNet                 |      CUB      |               |   CIFAR-FS     |               |
 |:--------------:|:-------------:|:-------------:|:-------------:|:-------------:|:--------------:|:-------------:|
 |                |     1-shot    |     5-shot    |     1-shot    |     5-shot    |    1-shot      |     5-shot    |
 |   S2M2_R (s)   | 64.93 +- 0.18 | 83.18 +- 0.11 | 80.68 +- 0.81 | 90.85 +- 0.44 | 74.81 +- 0.19  | 87.47 +- 0.13 |
