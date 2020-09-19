@@ -52,6 +52,7 @@ METHODNAME: S2M2_R/rotation/manifold_mixup
 All results will be saved in the folder "checkpoints", the best model is "best.tar".
 
 **Saving the features of a checkpoint for checkpoint evalution**
+
 ***S2M2_R algorithm***
 1) save frequency version:
 ```
@@ -83,6 +84,7 @@ All features will be saved in the folder "features".
 
 
 **Evaluating the few-shot performance**
+
 ***S2M2_R algorithm***
 1) test frequency version:
 ```
