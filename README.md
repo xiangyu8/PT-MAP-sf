@@ -1,7 +1,7 @@
 Few-Shot Learning by Integreting Spatial and Frequency Representation
 =======
 
-A few-shot classification algorithm: [Charting the Right Manifold: Manifold Mixup for Few-shot Learning](https://arxiv.org/pdf/1907.12087.pdf)
+A few-shot classification algorithm: [Few-Shot Learning by Integreting Spatial and Frequency Representation]
 
 Our code is built upon the code base of 
 
