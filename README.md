@@ -40,7 +40,7 @@ miniImagenet
 
 DATASETNAME: miniImagenet/cifar/CUB
 
-METHODNAME: S2M2_R/rotation/manifold_mixup
+METHODNAME: S2M2_R/rotation
 
 1) train frequency version:
 ```
