@@ -17,6 +17,11 @@ Running the code
 ------------
 **Dataset**: mini-ImageNet, CIFAR-FS, CUB
 
+**Environment**: python 3.6.9, 
+
+============================================================================
+***Install ***
+
 ============================================================================
 
 ***Donwloading the dataset***:
@@ -29,6 +34,9 @@ CUB
 CIFAR-FS
 * Change directory to filelists/cifar/
 * run 'source ./download_cifar.sh' 
+or
+* Download the dataset: [CIFAR-FS](https://drive.google.com/file/d/1pTsCCMDj45kzFYgrnO67BWVbKs48Q3NI/view)
+
 
 miniImagenet
 * Change directory to filelists/miniImagenet/
