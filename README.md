@@ -34,7 +34,9 @@ CUB
 CIFAR-FS
 * Change directory to filelists/cifar/
 * run 'source ./download_cifar.sh' 
+
 or
+
 * Download the dataset: [CIFAR-FS](https://drive.google.com/file/d/1pTsCCMDj45kzFYgrnO67BWVbKs48Q3NI/view)
 
 
