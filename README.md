@@ -9,7 +9,7 @@ Our code is built upon the code base of
 
 [A Closer Look at Few-shot Classification](https://openreview.net/pdf?id=HkxLXnAcFQ), 
 
-[Charting the Right Manifold: Manifold Mixup for Few-shot Learning](https://github.com/nupurkmr9/S2M2_fewshot.git), 
+[Charting the Right Manifold: Manifold Mixup for Few-shot Learning](https://github.com/nupurkmr9/S2M2_fewshot.git) ([code](https://github.com/nupurkmr9/S2M2_fewshot))
 
 [Learning in the Frequency Domain](https://openaccess.thecvf.com/content_CVPR_2020/papers/Xu_Learning_in_the_Frequency_Domain_CVPR_2020_paper.pdf) ([code](https://github.com/calmevtime/DCTNet.git))
 
