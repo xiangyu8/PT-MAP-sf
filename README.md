@@ -54,9 +54,10 @@ To run PT+MAP:
 * or download the dataset: [CIFAR-FS](https://drive.google.com/file/d/1pTsCCMDj45kzFYgrnO67BWVbKs48Q3NI/view)
 
 
-miniImagenet
+#### miniImagenet
 * Change directory to filelists/miniImagenet/
 * run 'source ./download_miniImagenet.sh' 
+* or download the dataset mannually: [mini-Imagenet](https://drive.google.com/file/d/0B3Irx3uQNoBMQ1FlNXJsZUdYWEE/view)
 
 ============================================================================
 
