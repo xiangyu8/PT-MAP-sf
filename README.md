@@ -17,16 +17,17 @@ Our code is built upon the code base of
 
 Running the code
 ------------
-**Dataset**: mini-ImageNet, CIFAR-FS, CUB
+*Dataset*: mini-ImageNet, CIFAR-FS, CUB
 
-**Environment**: python 3.6.9, 
-
-============================================================================
-***Install***
+*Environment*: python 3.6.9, 
 
 ============================================================================
 
-***Donwloading the dataset***:
+*Install*
+
+============================================================================
+
+*Donwloading the dataset*:
 
 CUB
 
