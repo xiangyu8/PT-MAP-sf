@@ -7,7 +7,7 @@ A few-shot classification algorithm: [Few-Shot Learning by Integrating Spatial a
 
 Our code is built upon the code base of 
 
-[A Closer Look at Few-shot Classification](https://openreview.net/pdf?id=HkxLXnAcFQ), 
+[A Closer Look at Few-shot Classification](https://openreview.net/pdf?id=HkxLXnAcFQ) ([code](https://github.com/wyharveychen/CloserLookFewShot))
 
 [Charting the Right Manifold: Manifold Mixup for Few-shot Learning](https://github.com/nupurkmr9/S2M2_fewshot.git) ([code](https://github.com/nupurkmr9/S2M2_fewshot))
 
