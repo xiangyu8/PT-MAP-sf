@@ -40,24 +40,26 @@ To run PT+MAP:
 
 ============================================================================
 
-### Donwloading the dataset:
+### Prepare the dataset:
 
 #### CUB
 
 * Change directory to filelists/CUB/
 * run 'source ./download_CUB.sh' 
 * or download the dataset: [CUB](https://drive.google.com/file/d/1hbzc_P1FuxMkcabkgn9ZKinBwW683j45/view)
+* Then, run ```python make_json.py``` to get train.json, val.json and novel.json
 
 #### CIFAR-FS
 * Change directory to filelists/cifar/
 * run 'source ./download_cifar.sh' 
 * or download the dataset: [CIFAR-FS](https://drive.google.com/file/d/1pTsCCMDj45kzFYgrnO67BWVbKs48Q3NI/view)
-
+* Then, run ```python make_json.py``` to get train.json, val.json and novel.json
 
 #### miniImagenet
 * Change directory to filelists/miniImagenet/
 * run 'source ./download_miniImagenet.sh' 
 * or download the dataset mannually: [mini-Imagenet](https://drive.google.com/file/d/0B3Irx3uQNoBMQ1FlNXJsZUdYWEE/view)
+* Then, run ```python make_json.py``` to get train.json, val.json and novel.json
 
 ============================================================================
 
