@@ -1,7 +1,7 @@
-Few-Shot Learning by Integreting Spatial and Frequency Representation
+Few-Shot Learning by Integrating Spatial and Frequency Representation
 =======
 
-A few-shot classification algorithm: [Few-Shot Learning by Integreting Spatial and Frequency Representation]
+A few-shot classification algorithm: [Few-Shot Learning by Integrating Spatial and Frequency Representation]
 
 ![Framework](https://github.com/xiangyu8/PT-MAP-sf/blob/master/framework.png)
 
