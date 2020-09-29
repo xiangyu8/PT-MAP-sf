@@ -85,7 +85,7 @@ All results will be saved in the folder "checkpoints", the best model is "best.t
 
 ============================================================================
 
-**Saving the features of a checkpoint for checkpoint evalution**
+### Saving features
 
 ***S2M2_R algorithm***
 1) save frequency version:
