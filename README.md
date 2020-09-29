@@ -158,15 +158,6 @@ Revise the n_shot in test_standard.py to get result of 5-shot or 1-shot.
 |   PT-MAP(f)    | 82.04 +- 0.23 | 88.68 +- 0.12 | 93.18 +- 0.16 | 95.02 +- 0.08 | 86.57 +- 0.23  | 90.28 +- 0.15 |
 |   PT-MAP(s+f)  | **85.01 +- 0.22** | **90.72 +- 0.11** | **95.45 +- 0.13** | **96.70 +- 0.07** | **89.39 +- 0.21**  | **92.08 +- 0.15** |
 
-|              Stage | Direct Products | ATP Yields |
-| -----------------: | --------------: | ---------: |
-|         Glycolysis |          2 ATP              ||
-| ^^                 |          2 NADH |   3--5 ATP |
-| Pyruvaye oxidation |          2 NADH |      5 ATP |
-|  Citric acid cycle |          2 ATP              ||
-| ^^                 |          6 NADH |     15 ATP |
-| ^^                 |          2 FADH |      3 ATP |
-|                               30--32 ATP        |||
 
 References
 ------------
