@@ -19,22 +19,22 @@ Running the code
 ------------
 Dataset: mini-ImageNet, CIFAR-FS, CUB
 
-## Environment: python 3.6.9, 
+Environment: python 3.6.9, 
 
 ============================================================================
 
-*Install*
+### Install
 
 ============================================================================
 
-*Donwloading the dataset*:
+### Donwloading the dataset*:
 
-CUB
+#### CUB
 
 * Change directory to filelists/CUB/
 * run 'source ./download_CUB.sh' 
 
-CIFAR-FS
+#### CIFAR-FS
 * Change directory to filelists/cifar/
 * run 'source ./download_cifar.sh' 
 
