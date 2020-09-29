@@ -23,11 +23,15 @@ Environment: python 3.6.9,
 
 ============================================================================
 
-### Install
+### Install:
+
+To run S2M2_R and other algorithms: pip install -r requirement.txt
+
+To run PT+MAP: pip install -r requirement_.txt
 
 ============================================================================
 
-### Donwloading the dataset*:
+### Donwloading the dataset:
 
 #### CUB
 
