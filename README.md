@@ -19,7 +19,7 @@ Running the code
 ------------
 Dataset: mini-ImageNet, CIFAR-FS, CUB
 
-##Environment##: python 3.6.9, 
+## Environment: python 3.6.9, 
 
 ============================================================================
 
