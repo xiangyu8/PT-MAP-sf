@@ -143,7 +143,7 @@ Revise the .plk file folder in FSLtask.py for frequency(out.plk), spatial(out.pl
 
 Revise the n_shot in test_standard.py to get result of 5-shot or 1-shot.
 
-Comparison with prior/current state-of-the-art methods on mini-ImageNet, CUB and CIFAR-FS dataset.
+***Comparison with the state-of-the-art on mini-ImageNet, CUB and CIFAR-FS dataset:***
 
 
 |      Method    | mini-ImageNet |               |      CUB      |               |   CIFAR-FS     |               |
