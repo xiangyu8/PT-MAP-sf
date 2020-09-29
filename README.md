@@ -63,13 +63,15 @@ To run PT+MAP:
 
 ============================================================================
 
-**Training**
+### Training
 
 DATASETNAME: miniImagenet/cifar/CUB
 
 METHODNAME: S2M2_R/rotation
 
-1) train frequency version:
+(To run S2M2_R, run rotation first since S2M2_R is based on rotation according to S2M2_R algorithm.)
+
+1) train frequency version: (8x8 DCT filter with top left 24 channels selected)
 ```
 	python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug --dct_status
 ```	
