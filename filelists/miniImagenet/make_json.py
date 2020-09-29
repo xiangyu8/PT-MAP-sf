@@ -40,7 +40,6 @@ for root, _, files in os.walk(data_path):
 classes = list(set(classes))
 
 classes_arr = classes[:]
-#data_path_new = './image_saliency/Image_MB/'
 
 data_path_new = './miniImagenet/Images/'
 #print(len(classes))
