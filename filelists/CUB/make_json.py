@@ -8,7 +8,7 @@ import random
 cwd = os.getcwd() 
 datadir = cwd.split('filelists')[0]
 data_path = join(datadir,'Datasets/CUB/images')
-data_path = '/scratch/x956c659/data/fewShot/CUB/CUB/images'
+data_path = '/CUB/images'
 savedir = './'
 dataset_list = ['base','val','novel']
 
