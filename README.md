@@ -73,12 +73,12 @@ METHODNAME: S2M2_R/rotation
 
 1) train frequency version: (8x8 DCT filter with top left 24 channels selected)
 ```
-	python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug --dct_status
+python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug --dct_status
 ```	
 
 2) train spatial version:
 ```
-	python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
+python train_dct.py --dataset [DATASETNAME] --method [METHODNAME] --model WideResNet28_10 --train_aug
 ```
 		
 All results will be saved in the folder "checkpoints", the best model is "best.tar".
@@ -90,28 +90,28 @@ All results will be saved in the folder "checkpoints", the best model is "best.t
 ***S2M2_R algorithm***
 1) save frequency version:
 ```
-	python save_features.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug --dct_status
+python save_features.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug --dct_status
 ```
 2) save spatial version:
 ```
-	python save_features.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
+python save_features.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
 ```
 3) save spatial and frequency version:
 ```
-	python save_features_both.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
+python save_features_both.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
 ```
 ***PT-MAP algorithm***
 1) save frequency version:
 ```
-	python save_plk.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug --dct_status
+python save_plk.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug --dct_status
 ```
 2) save spatial version:
 ```
-	python save_plk.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
+python save_plk.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
 ```
 3) save spatial and frequency version:
 ```
-	python save_plk_both.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
+python save_plk_both.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
 ```
 
 All features will be saved in the folder "features".
