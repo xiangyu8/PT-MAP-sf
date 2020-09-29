@@ -31,10 +31,10 @@ libjpeg-turbo 2.0.3
 
 ### Install:
 
-To run S2M2_R and other algorithms: 
+To run S2M2_R and other algorithms install with: 
 ```pip install -r requirement.txt```
 
-To run PT+MAP: 
+To run PT+MAP install with: 
 ```pip install -r requirement_map.txt```
 
 (I haven't tried to combine both environment setup.)
