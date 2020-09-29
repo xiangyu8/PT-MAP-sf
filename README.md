@@ -58,7 +58,7 @@ To run PT+MAP:
 #### miniImagenet
 * Change directory to filelists/miniImagenet/
 * run 'source ./download_miniImagenet.sh' 
-* or download the dataset mannually: [mini-Imagenet](https://drive.google.com/file/d/0B3Irx3uQNoBMQ1FlNXJsZUdYWEE/view) (need to download splition using download_miniImagenet.sh or from this repo, under filelists/miniImagenet/)
+* or download the dataset mannually: [mini-Imagenet](https://drive.google.com/file/d/0B3Irx3uQNoBMQ1FlNXJsZUdYWEE/view) (need to download splition using download_miniImagenet.sh or from this repo, under filelists/miniImagenet/, train.csv, test.csv and test.csv)
 * Then, run ```python make_json.py``` to get train.json, val.json and novel.json
 
 ============================================================================
