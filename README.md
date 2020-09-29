@@ -22,6 +22,7 @@ Running the code
 ***Prerequisites:*** 
 
 python 3.6.9
+libjpeg-turbo 2.0.3
 
 
 
