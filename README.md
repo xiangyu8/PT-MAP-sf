@@ -146,7 +146,7 @@ Revise the n_shot in test_standard.py to get result of 5-shot or 1-shot.
 ***Comparison with the state-of-the-art on mini-ImageNet, CUB and CIFAR-FS dataset:***
 
 
-|      Method    | mini-ImageNet                ||      CUB      |               |   CIFAR-FS     |               |
+|      Method    | mini-ImageNet                :||      CUB      |               |   CIFAR-FS     |               |
 |:--------------:|:-------------:|:-------------:|:-------------:|:-------------:|:--------------:|:-------------:|
 |                |     1-shot    |     5-shot    |     1-shot    |     5-shot    |    1-shot      |     5-shot    |
 |   S2M2_R[[1]](https://github.com/nupurkmr9/S2M2_fewshot)       | 64.93 +- 0.18 | 83.18 +- 0.11 | 80.68 +- 0.81 | 90.85 +- 0.44 | 74.81 +- 0.19  | 87.47 +- 0.13 |
