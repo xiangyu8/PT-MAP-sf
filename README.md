@@ -168,3 +168,6 @@ References
 [Meta Learning with Differentiable Convex Optimization](https://arxiv.org/pdf/1904.03758.pdf)
 
 [Manifold Mixup: Better Representations by Interpolating Hidden States](http://proceedings.mlr.press/v97/verma19a.html)
+
+[Leveraging the Feature Distribution in Transfer-based Few-Shot Learning](https://arxiv.org/pdf/2006.03806v2.pdf) ([code](https://github.com/yhu01/PT-MAP))
+
