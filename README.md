@@ -121,7 +121,7 @@ All features will be saved in the folder "features".
 
 ### Testing
 
-You could download 
+You could download checkpoints [here](https://drive.google.com/file/d/1V6HVYszPBOklGZB9eeH5JLeGvSvcXSwS/view?usp=sharing).
 
 ***S2M2_R algorithm***
 1) test frequency version:
