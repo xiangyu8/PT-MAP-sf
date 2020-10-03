@@ -80,6 +80,9 @@ if __name__ == '__main__':
         checkpoint_dir +='_aug'
     if params.dct_status:
         checkpoint_dir +='_dct'
+    if params.filter_size!= 8:
+        params.checkpoint_dir += '_%sfiltersize'%(params.filter_size)
+
     print(checkpoint_dir)
 
     if params.save_iter != -1:
@@ -94,7 +97,7 @@ if __name__ == '__main__':
 
     datamgr         = SimpleDataManager(image_size, batch_size = 3)
     if params.dct_status:
-        data_loader      = datamgr.get_data_loader_dct(loadfile, aug = False)
+        data_loader      = datamgr.get_data_loader_dct(loadfile, aug = False, filter_size = params.filter_size)
     else:
         data_loader      = datamgr.get_data_loader(loadfile, aug = False)
 
