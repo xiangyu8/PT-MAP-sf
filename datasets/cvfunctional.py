@@ -15,6 +15,7 @@ from numpy import r_
 from jpeg2dct.numpy import load, loads
 import skimage
 
+import math
 
 INTER_MODE = {'NEAREST': cv2.INTER_NEAREST, 'BILINEAR': cv2.INTER_LINEAR, 'BICUBIC': cv2.INTER_CUBIC}
 PAD_MOD = {'constant': cv2.BORDER_CONSTANT,
@@ -30,6 +31,53 @@ def transform_dct(img, encoder):
     dct_y, dct_cb, dct_cr = loads(img)  # 28
     return dct_y, dct_cb, dct_cr
 
+def opencv_loader(image, colorSpace='YCrCb'):
+    if colorSpace == "YCrCb":
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2YCrCb)
+    elif colorSpace == 'RGB':
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    return image
+
+
+def matrix2dct(matrix, size):
+    matrix = np.int16(matrix)
+    matrix = matrix - 128
+    assert matrix.max()<128 and matrix.min()>=-128, "dct matrix should be between -128 to 127!"
+    T = np.zeros((size, size))
+    for i in range(size):
+        for j in range(size):
+            if i==0:
+                T[i,j] = 1/math.sqrt(size)
+            else:
+                T[i,j] = (math.sqrt(2/size))*(math.cos(((2*j+1)*i*math.pi)/(2*size)))
+    dct_x_shape = matrix.shape[0]//size
+    dct_y_shape = matrix.shape[1]//size
+    dct = np.zeros((dct_x_shape,dct_y_shape,size*size))
+    for i in range(dct_x_shape):
+        for j in range(dct_y_shape):
+            tmp_matrix = matrix[i*size:i*size+size, j*size:(j+1)*size]
+            tmp_dct = np.matmul(T, tmp_matrix)
+            tmp_dct = np.matmul(tmp_dct, T.conj().T)
+            dct[i,j,:] = tmp_dct.reshape(-1)
+    return dct
+
+def transform_dct_size(img, encoder,size):
+    assert img.shape[0]>= size and img.shape[1]>=size, "image size is smaller than the dct filter !"
+    if img.dtype != 'uint8':
+        img = np.ascontiguousarray(img, dtype="uint8")
+    # to y cb cr, 4:2:0
+    img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
+    img = opencv_loader(img, colorSpace='YCrCb')
+    y,cb,cr = cv2.split(img)
+    cb = cv2.resize(cb, (cb.shape[1]//2, cb.shape[0]//2))
+    cr = cv2.resize(cr, (cr.shape[1]//2, cr.shape[0]//2))
+    # to dct_y, dct_cb, dct_cr
+
+    dct_y = matrix2dct(y, size)
+    dct_cb = matrix2dct(cb, size)
+    dct_cr = matrix2dct(cr, size)
+    
+    return dct_y, dct_cb, dct_cr
 
 def to_tensor_dct(img):
     """Converts a numpy.ndarray (H x W x C) in the range
