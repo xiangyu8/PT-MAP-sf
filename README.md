@@ -101,6 +101,9 @@ python save_features.py --dataset [DATASETNAME] --method S2M2_R --model WideResN
 ```
 python save_features_both.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
 ```
+
+All features will be saved in the folder "features".
+
 ***PT-MAP algorithm***
 1) save frequency version:
 ```
@@ -115,7 +118,8 @@ python save_plk.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_
 python save_plk_both.py --dataset [DATASETNAME] --method S2M2_R --model WideResNet28_10 --train_aug
 ```
 
-All features will be saved in the folder "features".
+All features will be saved in the folder "checkpoints/[DATASETNAME]/WideResNet28_10_S2M2_R_5way_1shot_aug/last".
+
 
 =================================================================================
 
