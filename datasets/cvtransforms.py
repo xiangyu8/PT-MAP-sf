@@ -63,14 +63,19 @@ class UpScaleDCT(object):
         return y,cb,cr
 
 class GetDCT(object):
-    def __init__(self):
+    def __init__(self, dct_filter_size = 8):
         self.jpeg_encoder = TurboJPEG()
+        self.dct_filter_size = dct_filter_size
 
     def __call__(self,img):
        # img = np.array(img, dtype='uint8')
       #  img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        dct_y, dct_cb, dct_cr = F.transform_dct(img, self.jpeg_encoder)
-        #print('Inside GetDCT: the shape of dct_y is ', dct_y.shape)
+        #print('Before GetDCT: the shape of img is ', img.shape)
+        if self.dct_filter_size ==8:
+            dct_y, dct_cb, dct_cr = F.transform_dct(img, self.jpeg_encoder)
+        else:
+            dct_y, dct_cb, dct_cr = F.transform_dct_size(img, self.jpeg_encoder, self.dct_filter_size)
+        #print('after GetDCT: the shape of dct_y is ', dct_y.shape, dct_cb.shape, dct_cr.shape)
         return dct_y, dct_cb, dct_cr
 
 
@@ -653,6 +658,7 @@ class RandomHorizontalFlip(object):
         Returns:
             CV Image: Randomly flipped image.
         """
+       # print("image before Horizontal: ", img.shape)
         if random.random() < self.p:
             return F.hflip(img)
         return img
