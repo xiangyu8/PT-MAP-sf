@@ -585,13 +585,15 @@ if __name__ == '__main__':
     val_file = configs.data_dir[params.dataset] + 'val.json'
     if params.dct_status == False:
         params.channels = 3
-    print("Hellow World!")
     params.checkpoint_dir = '%s/checkpoints/%s/%s_%s_%sway_%sshot' %(configs.save_dir, params.dataset, params.model, params.method, params.train_n_way, params.n_shot)
     if params.train_aug:
         params.checkpoint_dir += '_aug'    
 
     if params.dct_status:
         params.checkpoint_dir += '_dct'
+    
+    if params.filter_size!= 8:
+        params.checkpoint_dir += '_%sfiltersize'%(params.filter_size)
 
     if params.dataset == 'cifar':
         image_size = 32
@@ -610,12 +612,12 @@ if __name__ == '__main__':
     if params.method in ['baseline++', 'S2M2_R', 'rotation']:
         if params.dct_status:
             base_datamgr    = SimpleDataManager(image_size_dct, batch_size = params.batch_size)
-            base_loader     = base_datamgr.get_data_loader_dct( base_file , aug = params.train_aug )
+            base_loader     = base_datamgr.get_data_loader_dct( base_file , aug = params.train_aug, filter_size = params.filter_size )
             base_datamgr_test    = SimpleDataManager(image_size_dct, batch_size = params.test_batch_size)
-            base_loader_test     = base_datamgr_test.get_data_loader_dct( base_file , aug = False )
+            base_loader_test     = base_datamgr_test.get_data_loader_dct( base_file , aug = False, filter_size = params.filter_size )
             test_few_shot_params     = dict(n_way = params.train_n_way, n_support = params.n_shot) 
             val_datamgr             = SetDataManager(image_size_dct, n_query = 15, **test_few_shot_params)
-            val_loader              = val_datamgr.get_data_loader_dct( val_file, aug = False) 
+            val_loader              = val_datamgr.get_data_loader_dct( val_file, aug = False, filter_size = params.filter_size) 
         else:
             base_datamgr    = SimpleDataManager(image_size, batch_size = params.batch_size)
             base_loader     = base_datamgr.get_data_loader( base_file , aug = params.train_aug )
