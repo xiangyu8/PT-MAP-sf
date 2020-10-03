@@ -48,17 +48,14 @@ class TransformLoader:
         transform = transforms.Compose(transform_funcs)
         return transform
 
-    def get_composed_transform_dct(self, aug = False):
-        input_size1 = 512
-        input_size2 = 448
+    def get_composed_transform_dct(self, aug = False, filter_size = 8):
+       # print("aug: ", aug)
+       # print("filter size,", filter_size)
         if aug==False:
             transform = transforms_dct.Compose([ #transform_funcs,
-               # transforms_dct.Resize(int(self.image_size*1.15)),
-              #  transforms_dct.CenterCrop(self.image_size),
-              #  transforms_dct.Resize(448),
-                transforms_dct.Resize(int(448*1.15)),
-                transforms_dct.CenterCrop(448),
-                transforms_dct.GetDCT(),
+                transforms_dct.Resize(int(filter_size*56*1.15)),
+                transforms_dct.CenterCrop(filter_size*56),
+                transforms_dct.GetDCT(filter_size),
                 transforms_dct.UpScaleDCT(size=56),
                 transforms_dct.ToTensorDCT(),
                 transforms_dct.SubsetDCT(channels=24),
@@ -75,12 +72,10 @@ class TransformLoader:
             ])
         else:
             transform = transforms_dct.Compose([ #transform_funcs,
-             #   transforms_dct.RandomResizedCrop(self.image_size),
-             #   transforms_dct.Resize(448),
-                transforms_dct.RandomResizedCrop(448),
+                transforms_dct.RandomResizedCrop(filter_size*56),
                 transforms_dct.ImageJitter(self.jitter_param),
                 transforms_dct.RandomHorizontalFlip(),
-                transforms_dct.GetDCT(),
+                transforms_dct.GetDCT(filter_size),
                 transforms_dct.UpScaleDCT(size=56),
                 transforms_dct.ToTensorDCT(),
                 transforms_dct.SubsetDCT(channels=24),
@@ -117,8 +112,8 @@ class SimpleDataManager(DataManager):
 
         return data_loader
 
-    def get_data_loader_dct(self, data_file, aug):
-        transform = self.trans_loader.get_composed_transform_dct(aug)
+    def get_data_loader_dct(self, data_file, aug,filter_size):
+        transform = self.trans_loader.get_composed_transform_dct(aug, filter_size)
         dataset = SimpleDataset(data_file, transform,dct_status =True)
         data_loader_params = dict(batch_size = self.batch_size, shuffle = True, num_workers = 16, pin_memory = True)
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)  
@@ -138,8 +133,8 @@ class SimpleDataManager_both(DataManager):
 
         return data_loader
 
-    def get_data_loader_dct(self, data_file, aug):
-        transform = self.trans_loader.get_composed_transform_dct(aug)
+    def get_data_loader_dct(self, data_file, aug, filter_size):
+        transform = self.trans_loader.get_composed_transform_dct(aug, filter_size)
         dataset = SimpleDataset(data_file, transform,dct_status =True)
         data_loader_params = dict(batch_size = self.batch_size, shuffle = False, num_workers = 16, pin_memory = True)
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)  
@@ -159,12 +154,12 @@ class SetDataManager(DataManager):
         transform = self.trans_loader.get_composed_transform(aug)
         dataset = SetDataset( data_file , self.batch_size, transform, dct_status=False )
         sampler = EpisodicBatchSampler(len(dataset), self.n_way, self.n_eposide )  
-        data_loader_params = dict(batch_sampler = sampler,  num_workers = 8, pin_memory = True)       
+        data_loader_params = dict(batch_sampler = sampler,  num_workers = 16, pin_memory = True)       
         data_loader = torch.utils.data.DataLoader(dataset, **data_loader_params)
         return data_loader
 
-    def get_data_loader_dct(self, data_file, aug): 
-        transform = self.trans_loader.get_composed_transform_dct(aug)
+    def get_data_loader_dct(self, data_file, aug, filter_size): 
+        transform = self.trans_loader.get_composed_transform_dct(aug, filter_size)
         dataset = SetDataset( data_file , self.batch_size, transform, dct_status=True ) 
         sampler = EpisodicBatchSampler(len(dataset), self.n_way, self.n_eposide )
         data_loader_params = dict(batch_sampler = sampler,  num_workers = 16, pin_memory = True)
