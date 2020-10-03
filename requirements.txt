@@ -63,3 +63,12 @@ traitlets==4.3.2
 wcwidth==0.1.7
 webencodings==0.5.1
 widgetsnbextension==3.4.2
+
+sklearn==0.0
+PyTurboJPEG==1.4.0
+tensorboardX==2.0
+opencv-python==4.1.1.26
+lmdb==0.98
+pyarrow==0.17.1
+jpeg2dct==0.2.4
+h5py==2.10.0
