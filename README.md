@@ -166,6 +166,22 @@ Revise the n_shot in test_standard.py to get result of 5-shot or 1-shot.
 |   PT-MAP(s+f)  | **85.01 +- 0.22** | **90.72 +- 0.11** | **95.45 +- 0.13** | **96.70 +- 0.07** | **89.39 +- 0.21**  | **92.08 +- 0.15** |
 
 
+
+=================================================================================
+
+### Training frequency version with different filter sizes:
+
+DATASETNAME: miniImagenet/cifar/CUB
+MODEL: ResNet10dct/ResNet34dct/
+METHOD: baseline++
+Before training determin:
+*number of channels selection: ```./data/datamgr.py``` (channels = 24 by default)
+*channels of channels selection: ```main/__init__.py``` (revise the channels according to Figure 3 in paper.)
+
+```
+python train_dct.py --dataset [DATASETNAME] --method [METHOD] --model [MODEL] --train_aug --dct_status --filter_size [2/4/6/8/10...]
+```
+
 References
 ------------
 [A Closer Look at Few-shot Classification](https://openreview.net/pdf?id=HkxLXnAcFQ)
