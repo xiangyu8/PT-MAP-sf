@@ -179,9 +179,9 @@ METHOD: baseline++
 
 Before training determin:
 
-*number of channels selection: ```./data/datamgr.py``` (channels = 24 by default)
+* number of channels selection: ```./data/datamgr.py``` (channels = 24 by default)
 
-*channels of channels selection: ```main/__init__.py``` (revise the channels according to Figure 3 in paper.)
+* channels of channels selection: ```main/__init__.py``` (revise the channels according to Figure 3 in paper.)
 
 
 ```
