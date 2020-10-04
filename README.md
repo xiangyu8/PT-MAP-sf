@@ -177,7 +177,7 @@ MODEL: ResNet10dct/ResNet34dct/
 
 METHOD: baseline++
 
-Before training determin:
+Before training determine:
 
 * number of channels selection: ```./data/datamgr.py``` (channels = 24 by default)
 
