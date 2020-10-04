@@ -629,10 +629,7 @@ if __name__ == '__main__':
 
 
         if params.method=='baseline++':
-            print("before baseline++", params.method)
             model = BaselineTrain( model_dict[params.model], params.num_classes, loss_type = 'dist')        
-            print("inside baseline++")
-            print("your method: ",params.method=='baseline++')
 
         elif params.method == 'manifold_mixup':
             if params.model =='WideResNet28_10':
