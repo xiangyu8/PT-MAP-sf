@@ -15,8 +15,6 @@ Our code is built upon the code base of
 
 [Leveraging the Feature Distribution in Transfer-based Few-Shot Learning](https://arxiv.org/pdf/2006.03806v2.pdf) ([code](https://github.com/yhu01/PT-MAP))
 
-[jpeg2dct](https://github.com/uber-research/jpeg2dct/blob/master/jpeg2dct/numpy/__init__.py)
-
 Running the code
 ------------
 ***Dataset:*** mini-ImageNet, CIFAR-FS, CUB
@@ -201,4 +199,7 @@ References
 [Manifold Mixup: Better Representations by Interpolating Hidden States](http://proceedings.mlr.press/v97/verma19a.html)
 
 [Leveraging the Feature Distribution in Transfer-based Few-Shot Learning](https://arxiv.org/pdf/2006.03806v2.pdf) ([code](https://github.com/yhu01/PT-MAP))
+
+[jpeg2dct](https://github.com/uber-research/jpeg2dct/blob/master/jpeg2dct/numpy/__init__.py)
+
 
