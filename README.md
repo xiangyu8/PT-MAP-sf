@@ -35,7 +35,7 @@ To run S2M2_R and other algorithms install with:
 ```pip install -r requirement_dct.txt```
 
 To run PT+MAP install with: 
-```pip install -r requirement_map.txt```
+```pip install -r requirement_map.txt``` (titanxp)
 
 (I haven't tried to combine both environment setup.)
 
