@@ -64,6 +64,7 @@ wcwidth==0.1.7
 webencodings==0.5.1
 widgetsnbextension==3.4.2
 
+libjpeg-dev
 sklearn==0.0
 PyTurboJPEG==1.4.0
 tensorboardX==2.0
