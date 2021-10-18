@@ -125,7 +125,7 @@ All features will be saved in the folder "./checkpoints/[DATASETNAME]/WideResNet
 
 ### Testing
 
-You could download checkpoints [here](https://drive.google.com/file/d/1ViWgMc-pUN72IRxEKefP2pyM8Iobmm0K/view?usp=sharing).
+You could download checkpoints [here](https://drive.google.com/file/d/1Mt29zTQ2ecLAhVjoiaXW0BCULN4TcHGI/view?usp=sharing).
 
 ***S2M2_R algorithm***
 1) test frequency version:
